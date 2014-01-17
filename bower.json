@@ -13,6 +13,7 @@
   "optDependencies": {
     "momentjs": "2.5.0",
     "socket.io-client": "0.9.16",
+    "amanda": "0.4.7",
     "paths-js": "0.1.0"
   }
 }

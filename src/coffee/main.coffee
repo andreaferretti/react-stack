@@ -11,6 +11,7 @@ requirejs.config
     #'moment':       '../components/momentjs/moment'
     #'paths':        '../components/paths-js/dist/amd'
     #'io':           '../components/socket.io-client/dist/socket.io'
+    #'amanda':       '../components/amanda/releases/latest/amanda'
     'prelude-ls':   '../components/prelude-ls/browser/prelude-browser'
     '_l':           'prelude/_l'
     '_f':           'prelude/_f'
