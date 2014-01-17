@@ -9,11 +9,11 @@ requirejs.config
     'crossroads':   '../components/crossroads.js/dist/crossroads'
     'hasher':       '../components/hasher/dist/js/hasher'
     'prelude-ls':   '../components/prelude-ls/browser/prelude-browser'
-    '_l':           'app/prelude/_l'
-    '_f':           'app/prelude/_f'
-    '_o':           'app/prelude/_o'
-    '_s':           'app/prelude/_s'
-    '_n':           'app/prelude/_n'
+    '_l':           'prelude/_l'
+    '_f':           'prelude/_f'
+    '_o':           'prelude/_o'
+    '_s':           'prelude/_s'
+    '_n':           'prelude/_n'
 
 require ['prelude-ls', './router'], () ->
   console.log 'started'
