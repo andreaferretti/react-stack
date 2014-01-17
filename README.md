@@ -17,6 +17,7 @@ I have also added a few modules that are not mandatory, but are useful common de
 Finally, there are a few modules that may be useful, but possibly not for each type of application. These are in a separate `optDependencies` field in `bower.json` and are commented in `src/coffee/main.coffee`, and are
 
 * Moment.js to handle dates and times
+* Socket.io to support cross-browser websockets
 * Paths.js to generate SVG graphics
 
 Structure of the application

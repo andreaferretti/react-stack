@@ -10,6 +10,7 @@ requirejs.config
     'hasher':       '../components/hasher/dist/js/hasher'
     #'moment':       '../components/momentjs/moment'
     #'paths':        '../components/paths-js/dist/amd'
+    #'io':           '../components/socket.io-client/dist/socket.io'
     'prelude-ls':   '../components/prelude-ls/browser/prelude-browser'
     '_l':           'prelude/_l'
     '_f':           'prelude/_f'
