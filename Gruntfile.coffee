@@ -143,31 +143,25 @@ module.exports = (grunt) ->
           optimize: 'uglify'
           name: 'main'
 
-  
-  grunt.registerTask('server', [
+  grunt.registerTask('compile', [
     'copy:require'
     'coffee:compile'
     'react:compile'
+  ])
+  
+  grunt.registerTask('server', [
+    'compile'
     'compass:server'
     'connect:server'
     'open:server'
     'watch'
   ])
 
-  grunt.registerTask('compile', [
-    'coffee:compile'
-    'react:compile'
-    'compass:server'
-  ])
-
   grunt.registerTask('build', [
     'clean:dist'
     'clean:tmp'
     'clean:tmp_dist'
-    'coffee:compile'
-    'react:compile'
-    'compass:compile'
-    'copy:require'
+    'compile'
     'copy:dist'
     'requirejs:compile'
     'clean:tmp'
