@@ -23,6 +23,8 @@ Finally, there are a few modules that may be useful, but possibly not for each t
 
 All of these libraries handle orthogonal concerns and integrate seamlessly with each other.
 
+There is also a [twin example](https://github.com/andreaferretti/ractive-stack) with Ractive.js.
+
 Structure of the application
 ----------------------------
 
