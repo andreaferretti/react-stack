@@ -120,6 +120,14 @@ module.exports = (grunt) ->
           { expand: true, cwd: '<%= config.tmp %>/', src: ['**/*.js', '**/*.css'], dest: '<%= config.tmp_dist %>/' }
           { expand: true, cwd: '<%= config.app %>/', src: ['**'], dest: '<%= config.tmp_dist %>/' }
         ]
+      require:
+        files: [
+          {
+            expand: false
+            src: ['<%= config.app %>/components/requirejs/require.js']
+            dest: '<%= config.tmp %>/js/require.js'
+          }
+        ]
 
     requirejs:
       compile:
@@ -130,12 +138,14 @@ module.exports = (grunt) ->
           skipDirOptimize: true
           removeCombined: true
           keepBuildDir: true
+          preserveLicenseComments: false
           mainConfigFile: '<%= config.tmp_dist %>/js/main.js'
           optimize: 'uglify'
-          modules: [{ name: 'main' }]
+          name: 'main'
 
   
   grunt.registerTask('server', [
+    'copy:require'
     'coffee:compile'
     'react:compile'
     'compass:server'
@@ -146,6 +156,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask('compile', [
     'coffee:compile'
+    'react:compile'
     'compass:server'
   ])
 
@@ -156,10 +167,12 @@ module.exports = (grunt) ->
     'coffee:compile'
     'react:compile'
     'compass:compile'
+    'copy:require'
     'copy:dist'
     'requirejs:compile'
+    'clean:tmp'
     'clean:tmp_dist'
-#    'clean:components'
+    'clean:components'
   ])
 
   grunt.registerTask('default', ['build'])
