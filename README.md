@@ -19,6 +19,24 @@ Finally, there are a few modules that may be useful, but possibly not for each t
 * Moment.js to handle dates and times
 * Paths.js to generate SVG graphics
 
+Structure of the application
+----------------------------
+
+The source of the application goes under `src`; specifically `src/coffee` contains your coffeescript code and `src/sass` the stylesheets. Client side dependencies are declared in `bower.json` and usually require an AMD shortcut in `src/coffee/main.coffee`.
+
+Prelude.ls is split under different modules in `src/coffee/prelude`, namely `_l` for functions that work with lists, `_o` for objects, `_s` for strings, `_f` for functions and `_n` for numbers. This makes it easier to import the different Prelude.ls submodules directly and to augment them with other common utility functions (see `_o.pick` as an example).
+
+React views are prefixed with a pragma comment
+
+    `/** @jsx React.DOM */\`
+
+More generally, parts of the code that are to be translated by JSX are to be left unchanged by the coffeescript compiler, hence they are surrounded by backticks, like this:
+
+    React.renderComponent(
+      `<CompositeView data={ countries } />`,
+      document.getElementById 'content'
+    )
+
 Usage
 -----
 
