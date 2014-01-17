@@ -8,6 +8,8 @@ requirejs.config
     'signals':      '../components/js-signals/dist/signals'
     'crossroads':   '../components/crossroads.js/dist/crossroads'
     'hasher':       '../components/hasher/dist/js/hasher'
+    #'moment':       '../components/momentjs/moment'
+    #'paths':        '../components/paths-js/dist/amd'
     'prelude-ls':   '../components/prelude-ls/browser/prelude-browser'
     '_l':           'prelude/_l'
     '_f':           'prelude/_f'

@@ -14,6 +14,11 @@ I have also added a few modules that are not mandatory, but are useful common de
 * Prelude.ls, which is a general purpose collections and utility library
 * Pajamas to fire HTTP requests and return Q promises
 
+Finally, there are a few modules that may be useful, but possibly not for each type of application. These are in a separate `optDependencies` field in `bower.json` and are commented in `src/coffee/main.coffee`, and are
+
+* Moment.js to handle dates and times
+* Paths.js to generate SVG graphics
+
 Usage
 -----
 
