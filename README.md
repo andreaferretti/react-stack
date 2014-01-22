@@ -25,6 +25,8 @@ All of these libraries handle orthogonal concerns and integrate seamlessly with 
 
 There is also a [twin example](https://github.com/andreaferretti/ractive-stack) with Ractive.js.
 
+See also the related yeoman generator [Auser](https://github.com/mfirry/generator-auser).
+
 Structure of the application
 ----------------------------
 
