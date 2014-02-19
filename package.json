@@ -13,8 +13,7 @@
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-open": "~0.2.2",
     "grunt-react": "~0.6.0",
-    "load-grunt-tasks": "~0.3.0",
-    "load-grunt-config": "~0.7.1", 
+    "load-grunt-config": "~0.7.1",
     "connect-livereload": "~0.3.2"
   },
   "engines": {
