@@ -9,6 +9,6 @@ define [
       query = this.props.query.toLowerCase()
       entries = this.props.data
         .filter((entry) -> _s.contains(entry.name.toLowerCase(), query))
-        .map((entry) -> `<li>{ entry.name + ": " + entry.population }</li>`)
-      
+        .map((entry) -> `<li>{ entry.name }: { entry.population }</li>`)
+
       `<ul>{ entries }</ul>`
