@@ -6,7 +6,6 @@
     "react": "0.9.0",
     "prelude-ls": "1.0.3",
     "pajamas": "1.6.1",
-    "catiline": "2.9.3",
     "crossroads.js": "0.12.0",
     "hasher": "1.2.0"
   },
