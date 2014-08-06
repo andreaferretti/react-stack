@@ -3,11 +3,19 @@
 define [
   'react'
   'react-router-component'
+  'views/navbar'
   'views/composite'
-], (React, Router, Composite)->
+  'views/hello'
+], (React, Router, Navbar, Composite, Hello)->
   { Location, Locations } = Router
+  console.log Hello, Location, Locations, Router
   content = document.getElementById 'content'
 
-  React.renderComponent(`<Locations>
-      <Location path="/" handler={ Composite } />
-    </Locations>`, content)
+  React.renderComponent(
+    `<div>
+      <Navbar />
+      <Locations>
+        <Location path="/" handler={ Composite } />
+        <Location path="/hello" handler={ Hello } />
+      </Locations>
+    </div>`, content)
