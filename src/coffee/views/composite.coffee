@@ -2,9 +2,11 @@
 
 define [
   'react'
+  'react-bootstrap/Row'
+  'react-bootstrap/Col'
   './search'
   './list'
-], (React, SearchView, ListView)->
+], (React, Row, Col, Search, List)->
   countries = [
     { name: 'Italy', population: 59859996 },
     { name: 'Mexico', population: 118395054 },
@@ -18,7 +20,9 @@ define [
     getInitialState: ->
       value: ''
     render: ->
-      `<div>
-        <SearchView state={ this.linkState("value") } />
-        <ListView data={ countries } query={ this.state.value } />
-      </div>`
+      `<Row>
+        <Col md={4}>
+          <Search valueLink={ this.linkState("value") } />
+          <List data={ countries } query={ this.state.value } />
+        </Col>
+      </Row>`

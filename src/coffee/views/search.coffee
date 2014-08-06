@@ -2,7 +2,8 @@
 
 define [
   'react'
-], (React)->
+  'react-bootstrap/Input'
+], (React, Input)->
   React.createClass
     render: ->
-      `<input type="text" valueLink={ this.props.state } />`
+      `<Input type="text" placeholder="Filter here" valueLink={ this.props.valueLink } />`

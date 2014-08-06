@@ -5,6 +5,7 @@ requirejs.config
     'react':                    '../components/react/react-with-addons'
     'react-async':              '../components/react-async/react-async'
     'react-router-component':   '../components/react-router-component/react-router-component'
+    'react-bootstrap':          '../components/react-bootstrap'
     'q':                        '../components/q/q'
     'pajamas':                  '../components/pajamas/dist/pajamas'
     #'catiline':                 '../components/catiline/dist/catiline'

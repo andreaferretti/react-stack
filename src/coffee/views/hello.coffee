@@ -5,4 +5,4 @@ define [
 ], (React)->
   React.createClass
     render: ->
-      `<div>Hello routing</div>`
+      `<blockquote>Hello routing</blockquote>`

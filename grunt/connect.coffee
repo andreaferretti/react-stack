@@ -6,6 +6,8 @@ config =
   livereload_port: 35729
   app: 'app'
   tmp: '.tmp'
+  bootstrap: 'app/components/bootstrap/dist'
+  fontawesome: 'app/components/font-awesome'
 
 module.exports =
   server:
@@ -17,4 +19,6 @@ module.exports =
           require('connect-livereload')(port: config.livereload_port)
           mountFolder(connect, config.tmp)
           mountFolder(connect, config.app)
+          mountFolder(connect, config.bootstrap)
+          mountFolder(connect, config.fontawesome)
         ]

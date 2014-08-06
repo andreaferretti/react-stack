@@ -3,12 +3,18 @@
 define [
   'react'
   'react-router-component'
-], (React, Router)->
+  'react-bootstrap/Nav'
+  'react-bootstrap/NavItem'
+], (React, Router, Nav, NavItem)->
   Link = Router.Link
 
   React.createClass
     render: ->
-      `<div>
-        <Link href="/" >Home</Link>
-        <Link href="/hello" >Hello</Link>
-      </div>`
+      `<Nav bsStyle="pills">
+        <NavItem>
+          <Link href="/" >Home</Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/hello" >Hello</Link>
+        </NavItem>
+      </Nav>`
